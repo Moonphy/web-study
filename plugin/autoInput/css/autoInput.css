@@ -1,0 +1,23 @@
+.auto-input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #179ae4;
+}
+.auto-data {
+  box-sizing: border-box;
+  border: 1px solid #179ae4;
+  border-top: none;
+  display: none;
+}
+.auto-data .item {
+  font-size: 14px;
+  line-height: 30px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.auto-data .item:hover {
+  background-color: #dddddd;
+}

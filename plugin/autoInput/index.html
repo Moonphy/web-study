@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="./css/autoInput.css"/>
+    <title>输入框自动填充Demo</title>
+    <style>
+        .form-wrap{
+            width: 300px;
+            margin: auto;
+        }
+        .input-1,.input-2{
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="form-wrap">
+        <form action="">
+            <!-- 第一个自动填充输入框-->
+            <div class="input-1">
+                <input type="text" id="ranking" placeholder="请输入您所需查询的学校" class="auto-input">
+                <div class="auto-data" id="auto-data"></div>
+            </div>
+
+
+            <!-- 第二个自动填充输入框-->
+            <div class="input-2">
+                <input type="text" id="test" placeholder="请输入您所需查询的学校" class="auto-input">
+                <div class="auto-data" id="test-data"></div>
+            </div>
+
+
+            <!--<button class="submit btn btn-green">提交查询</button>-->
+        </form>
+    </div>
+
+</div>
+<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="./js/autoInput.js"></script>
+<script>
+
+    //测试用的数据
+    var test_data = ["中山大学", "华南理工大学", "济南大学", "暨南大学", "华南师范大学", "广东外语外贸大学", "广东财经大学", "华南农业大学", "广东工业大学", "广东医科大学", "广东药科大学", "广州大学", "广东金融学院", "深圳大学", "中山职业技术学院"];
+
+
+    // 单个输入框时
+    var autoInput = new autoInput($('.auto-input'),test_data);
+    //autoInput.init($('.auto-input'));
+    //输入框提示
+    //old_value = $("#ranking").val();
+    /*$("#ranking").focus(function () {
+        if ($("#ranking").val() == "") {
+            AutoComplete("auto-data", "ranking", test_list);
+        }
+    });
+    $("#ranking").on('input',function () {
+        AutoComplete("auto-data", "ranking", test_list);
+    });
+
+    $("#test").focus(function () {
+        if ($("#test").val() == "") {
+            AutoComplete("test-data", "test", test_list);
+        }
+    });
+    $("#test").on('input',function () {
+        AutoComplete("test-data", "test", test_list);
+    });*/
+
+    //var list = ['广州','深圳','北京','上海'];
+    function indexTest (testWord, list){
+        for(i in list){
+            var a = list[i].indexOf(testWord);
+            alert(a)
+        }
+
+    }
+    //indexTest('深圳',list)
+
+
+</script>
+
+</body>
+</html>

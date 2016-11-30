@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lightbox插件demo</title>
+    <link rel="stylesheet" href="css/lightbox.css"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol,ul{
+            list-style: none;
+        }
+        .group img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<h1>1组图片</h1>
+<div class="group">
+    <img src="img/4.jpg" alt="" class="js-lightbox" data-role="lightbox" data-source="img/4.jpg" data-group="group-1" data-id="4" data-caption="图片4">
+    <img src="img/5.jpg" alt="" class="js-lightbox" data-role="lightbox" data-source="img/5.jpg" data-group="group-1" data-id="4" data-caption="图片5">
+</div>
+<h1>2组图片</h1>
+<div class="group">
+    <img src="img/1.jpg" alt="" class="js-lightbox" data-role="lightbox" data-source="img/1.jpg" data-group="group-2" data-id="1" data-caption="图片1">
+    <img src="img/2.jpg" alt="" class="js-lightbox" data-role="lightbox" data-source="img/2.jpg" data-group="group-2" data-id="2" data-caption="图片2">
+    <img src="img/3.jpg" alt="" class="js-lightbox" data-role="lightbox" data-source="img/3.jpg" data-group="group-2" data-id="3" data-caption="图片3">
+</div>
+
+<!--<div id="G-lightbox-mask"></div>
+<div id="G-lightbox-popup">
+    <div class="lightbox-pic-view">
+        <a href="javascript:;" class="lightbox-btn lightbox-prev-btn">&lt;</a>
+        <img src="./img/1.jpg" alt="" class="lightbox-image">
+        <a href="javascript:;" class="lightbox-btn lightbox-next-btn">&gt;</a>
+    </div>
+    <div class="lightbox-pic-caption">
+        <div class="lightbox-caption-area">
+            <p class="lightbox-pic-desc">图片标题</p>
+            <span class="lightbox-of-index">当前索引：1 of 4</span>
+        </div>
+        <a href="javascript:;" class="lightbox-close-btn">&Chi;</a>
+    </div>
+</div>-->
+
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script>
+    $(function () {
+        var lightbox = new LightBox();
+    });
+</script>
+</body>
+</html>

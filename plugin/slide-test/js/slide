@@ -1,0 +1,11 @@
+var container = document.getElementById('ck-slide'),
+    list = document.getElementById('ck-slide-wrapper'),
+    buttons = document.getElementById('dot-wrap').getElementsByTagName('li'),
+    prev = document.getElementById('ck-prev'),
+    next = document.getElementById('ck-next');
+var liWidth = 700;
+var index = 1;
+var len = 4;
+var animated = false;
+var interval = 3000;
+var timer;

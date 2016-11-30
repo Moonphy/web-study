@@ -1,0 +1,61 @@
+//下拉框样式
+.gs-dropdown{
+  width: 100%;
+  margin: 1rem auto;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5rem;
+  color: @green;
+  font-family: "Microsoft Yahei", "sans-serif";
+  input{
+    border: none!important;
+    margin: 0!important;
+  }
+}
+.dropdown-focus{
+  border: 1px solid @green;
+}
+.icon-down{
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 0.8rem;
+  background: url("../img/icon-down.png") no-repeat 0 0;
+  background-size: 2.5rem 2.5rem;
+}
+.icon-up{
+  display: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1.5rem;
+  background: url("../img/icon-up.png") no-repeat 0 0;
+  background-size: 2.5rem 2.5rem;
+}
+.dropdown-item{
+  width: 100%;
+  position: relative;
+  top: 0;
+  display: none;
+  z-index: 9;
+  border-radius: 0 0 6px 6px;
+  padding: 10px 0;
+  //background-color: white;
+  li{
+    width: 100%;
+    line-height: 3.5rem;
+    cursor: pointer;
+    padding-left: 60px;
+    box-sizing: border-box;
+    list-style: none;
+    background: url("../img/unselect.png") no-repeat 20px center;
+    background-size: 2rem 2rem;
+  }
+  .selected{
+    background: url("../img/selected.png") no-repeat 20px center;
+    background-size: 2rem 2rem;
+  }
+}

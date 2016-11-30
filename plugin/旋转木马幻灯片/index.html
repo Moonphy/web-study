@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转木马幻灯片插件Demo</title>
+    <link rel="stylesheet" href="css/carousel.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        body{
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="poster-main">
+        <ul class="poster-list">
+            <li class="poster-item"><a href="#"><img src="img/1.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/2.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/3.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/4.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/5.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/6.jpg" alt=""></a></li>
+        </ul>
+        <div class="poster-btn poster-prev-btn">&lt;</div>
+        <div class="poster-btn poster-next-btn">&gt;</div>
+    </div>
+</div>
+<div class="row">
+    <div class="poster-main" data-setting='{
+                                                "width":900,
+                                                "height":270,
+                                                "posterWidth":640,
+                                                "posterHeight":270,
+                                                "scale": 0.8,
+                                                "autoPlay": true,
+                                                "delay": 4000,
+                                                "verticalAlign": "middle"
+                                            }'>
+        <ul class="poster-list">
+            <li class="poster-item"><a href="#"><img src="img/1.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/2.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/3.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/4.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/5.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/2.jpg" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="img/6.jpg" alt=""></a></li>
+        </ul>
+        <div class="poster-btn poster-prev-btn">&lt;</div>
+        <div class="poster-btn poster-next-btn">&gt;</div>
+    </div>
+</div>
+
+
+
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+<script>
+    $(function () {
+        //单个幻灯片的时候
+        //var carousel = new Carousel($('.poster-main').eq(0))
+
+        //多个幻灯片的时候
+        Carousel.init($('.poster-main'))
+    });
+</script>
+</body>
+</html>

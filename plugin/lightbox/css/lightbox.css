@@ -1,0 +1,82 @@
+#G-lightbox-mask {
+  background: black;
+  opacity: .6;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: none;
+}
+#G-lightbox-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  border: 3px solid #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  display: none;
+}
+.lightbox-pic-view {
+  border-radius: 6px;
+}
+.lightbox-btn {
+  width: 50px;
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+}
+.lightbox-btn.disable {
+  display: none;
+}
+.lightbox-btn:hover {
+  background-color: black;
+  opacity: .8;
+}
+.lightbox-prev-btn {
+  left: 0;
+}
+.lightbox-next-btn {
+  right: 0;
+}
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+.lightbox-pic-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  opacity: .5;
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.lightbox-caption-area {
+  position: relative;
+  z-index: 1;
+}
+.lightbox-close-btn {
+  width: 50px;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  z-index: 9;
+}
+.lightbox-close-btn:hover {
+  background-color: black;
+  opacity: .8;
+}

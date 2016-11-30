@@ -1,0 +1,126 @@
+// 首页样式
+// ====================================
+
+.gs-page{
+  width: 100%;
+  max-width: 960px;
+  font-size: 1.6rem;
+  background: white;
+  margin: 0 auto;
+  overflow: hidden;
+}
+// 头部样式
+// =================
+.header{
+  width: 100%;
+  position: relative;
+  img{
+    width: 100%;
+    display: block;
+  }
+  .icon{
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    top: 18%;
+    z-index: 9;
+  }
+  .icon-back{
+    left: 2rem;
+    background: url("../img/icon-back.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .icon-index{
+    right:2rem;
+    background: url("../img/icon-index.png") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+.icon{
+  display: inline-block;
+}
+.main{
+  width: 96%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+.instructions{
+  p {
+    text-indent: 20px;
+  }
+  ul{
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+}
+
+.more-link{
+  color: #00a6e6;
+}
+.form-wrap{
+  font-size: 1.6rem;
+  padding-top: 1rem;
+  input{
+    width: 100%;
+    line-height: 1.2;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    margin: 1rem auto;
+    border: 0.1rem solid #d9d9d9;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    color: black;
+    &:focus{
+      border: 0.1rem solid @green;
+      color: @green;
+    }
+  }
+  p.font-xxs{
+    margin-bottom: 0.5rem;
+  }
+  .auto-input{
+    width: 100%;
+    display: none;
+    margin-top: -1rem;
+    box-sizing: border-box;
+    border-left: 1px solid @green;
+    border-right: 1px solid @green;
+    border-bottom: 1px solid @green;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  .submit{
+    line-height: 1.5;
+  }
+
+}
+.icon-xing{
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url("../img/icon-xing.png") no-repeat center bottom;
+  background-size: 70% 70%;
+}
+.zhiyuan-title{
+  background-color: #aee1bf;
+  font-weight: 300;
+  width: 110%;
+  margin-left: -5%;
+  text-indent: 6%;
+}
+.h4-title{
+  background-color: #aee1bf;
+  font-weight: 300;
+  width: 100%;
+  text-indent: 5%;
+}
+.tl{
+  .btn{
+    text-align: left;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: white;
+  }
+}
