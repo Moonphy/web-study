@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>URL网址解析</title>
+</head>
+<body>
+<div>
+    <ol>
+        <li>命令行输入：node，进入node环境</li>
+        <li>输入：url</li>
+        <li>输入：url.parse('http://imooc.com/course/list')---解析成一个对象：{protocol:'http:',...}</li>
+        <li>输入：url.format({对象})---生成一个url地址</li>
+        <li>输入：url.resolve('http://imooc.com/', '/course/list')---合并成一个url地址</li>
+    </ol>
+    <ol>
+        <li>querystring.stringify()</li>
+        <li>querystring.stringify({name:'moonphy', course:['jade','node'], from:''})</li>
+        <li>'name=moonphy&course=jade&course=node&from='</li>
+        <li>querystring.stringify({name:'moonphy', course:['jade','node'], from:''}, ',',':')</li>
+    </ol>
+    <ol>
+        <li>querystring.parse()</li>
+        <li>querystring.parse('name=moonphy&course=jade&course=node&from=')</li>
+        <li>{name:'moonphy', course:['jade','node'], from:''}</li>
+    </ol>
+    <ol>
+        <li>querystring.转译</li>
+        <li>querystring.escape('<哈哈>')</li>
+        <li>querystring.unescape('.......')</li>
+    </ol>
+</div>
+</body>
+</html>

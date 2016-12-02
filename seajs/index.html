@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="text-align: center;font-size: 48px;color: green;">Press the space key</div>
+
+<script src="assets/sea-modules/spm_modules/seajs/2.3.0/dist/sea.js"></script>
+<script>
+    seajs.config({
+        base: "./assets/",
+        alias: {
+            '$': 'sea-modules/spm_modules/jquery/2.1.4/jquery-sea',
+            'util': 'util/index',
+            'hello': 'hello/index',
+            'handle-text': 'handle/index'
+        }
+    });
+    seajs.use(['$','hello'], function ($,hello) {
+        //console.log($);
+        $(document).keypress(function (ev) {
+            if(ev.which == 32){
+                new hello();
+            }
+        })
+    })
+</script>
+</body>
+</html>

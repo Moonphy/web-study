@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="width: 200px;height: 1000px;border: 1px solid red"></div>
+
+
+<script src="//cdn.bootcss.com/jquery/2.1.0/jquery.js"></script>
+<script>
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop(),
+            windowHeight = $(this).height(),
+            scrollHeight = $(document).height();
+
+        if(scrollTop + windowHeight >= scrollHeight - 10){
+            var _dom = '<div style="border: 1px solid blue;height: 60px;width: 300px;"></div>';
+            $('body').append(_dom)
+        }
+    });
+</script>
+</body>
+</html>

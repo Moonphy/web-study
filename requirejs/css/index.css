@@ -1,0 +1,15 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/\%B2\%E5\%BC\%FE\%D1\%A7\%CF\%B0\/requirejs\/css\/index\.scss}line{font-family:\000031}}
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/\%B2\%E5\%BC\%FE\%D1\%A7\%CF\%B0\/requirejs\/css\/index\.scss}line{font-family:\000038}}
+ul li a {
+  text-decoration: none;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/F\:\/\%B2\%E5\%BC\%FE\%D1\%A7\%CF\%B0\/requirejs\/css\/index\.scss}line{font-family:\0000311}}
+ul li a:hover {
+  color: red;
+}

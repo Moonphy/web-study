@@ -1,0 +1,79 @@
+//全局安装coolie.cli
+npm install -g coolie
+coolie version
+coolie
+
+//开始
+//切换到工作目录的js文件夹，下载coolie.js
+coolie pull
+
+//同时创建coolie-config.js
+coolie config
+
+//新建index.js
+define(function (require, exports, module){
+    alert('Hello world!');
+});
+
+//新建index.html
+<!doctype html>
+<script coolie src="./coolie.min.js" data-config="./coolie-config.js" data-main="index.js"></script>
+
+//前端构建
+//生成配置文件
+//在根目录执行
+coolie json
+
+{
+// JS 文件构建配置
+  "js": {
+      // JS 文件构建路径，可以使用 glob 通配符
+    "src": [
+      "./index.js"
+    ],
+    // 模块加载器配置文件路径
+    "coolie-config.js": "./coolie-config.js",
+    // 非模块化脚本存放位置
+    "dest": "./",
+    // chunk 模块列表
+    "chunk": []
+  },
+  // CSS 文件构建配置
+  "css": {
+      // CSS 文件的生成目录
+    "dest": "./"
+  },
+  // HTML 文件构建配置
+  "html": {
+      // HTML 文件的构建目录，可以使用 glob 通配符
+    "src": [
+      "./index.html"
+    ],
+    // 是否压缩 HTML 文件
+    "minify": true
+  },
+  // 静态资源文件构建配置
+  "resource": {
+      // 静态资源的生成目录
+    "dest": "./",
+    // 是否压缩静态资源文件
+    "minify": true
+  },
+  // 构建结果目录
+  "dest": "../dest/",
+  // 需要复制到构建目录的文件或目录的列表，可以使用 glob 通配符
+  "copy": []
+}
+
+//执行构建
+coolie build
+
+//运行
+//安装本地静态服务器sts，
+npm i -g sts
+
+//切换到根目录，执行
+sts 19092
+
+//开发环境代码完成，构建生产环境代码。切换根目录，执行
+coolie build

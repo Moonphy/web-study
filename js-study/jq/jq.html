@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-2.1.0-rc1.min.js"></script>
+    <title></title>
+    <style>
+        .newcolor{
+            background:blue;
+        }
+        .queueDIV{
+            margin:3px; width:40px;
+            height:40px;position:absolute;
+            left:0px; top:30px;
+            background:green; display:none;
+        }
+        .spanColor{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<!-- queue()-->
+<button id="show">show length of queue</button>
+<span></span>
+<div class="queueDIV"></div>
+<script>
+    $(function(){
+        // queue()显示或操作在匹配元素上执行的函数队列
+        $('#show').click(function () {
+            var n = $('.queueDIV').queue();
+            $("span").text("Queue length is: " + n.length);
+        });
+        function runIt(){
+            $('.queueDIV')
+                .show('slow')
+                .animate({left:'+=200'}, 2000)
+                .slideToggle(1000)
+                .slideToggle('fast')
+                .animate({left:'-=200'},1500)
+                .hide("slow")
+                .show(1200)
+                .slideUp("normal",runIt);
+        }
+        runIt()
+    })
+</script>
+</body>
+</html>

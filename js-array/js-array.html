@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+  <title></title>
+</head>
+<body>
+<div class="container">
+    <form class="form">
+        <fieldset>
+            <legend>登录</legend>
+                username:<input type="text" name="username" id="username"  class="form-control"/><br/>
+                passowrd:<input type="password" name="password" id="password" class="form-control"/><br/>
+            <input type="submit" class="btn btn-primary btn-block" value="logo in" /><br/>
+        </fieldset>
+    </form>
+
+</div>
+<div class="container">
+    <legend>数组去重</legend>
+    <script>
+        // 利用数组的indexOf方法
+        function unique(arr,result){
+            //var result = [];
+            for(var i= 0; i<arr.length; i++){
+                if(result.indexOf(arr[i] == -1)){
+                    result.push((arr[i]))
+                }
+            }
+            console.log(result);
+            return result;
+
+        }
+        var arr = [1,2,3,1];
+        var result = [1,2,3];
+        unique(arr,result)
+    </script>
+</div>
+</body>
+</html>

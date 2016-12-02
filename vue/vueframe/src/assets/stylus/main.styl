@@ -1,0 +1,538 @@
+
+.ttv-table
+  border 1px solid #ccc
+  border-collapse collapse
+  border-spacing 0
+  width 100%
+  .ttv-table-bigtd
+    width 30%
+  .ttv-table-orgtd
+    width 20%
+  .ttv-table-midtd
+    width 170px
+  thead
+    td
+      background-color #FCFCFC
+      font-size 12px
+      font-weight bold
+  tr
+    height: 25px;
+    line-height 25px
+    td
+      padding: 4px 20px;
+      border: 1px solid #ddd
+      input[type="checkbox"]
+        margin-right 5px
+    &:hover
+      background-color #E5FCFD
+  tbody
+    tr
+      &:hover
+        .ttv-btn
+          display inline
+      &:nth-child(even)
+        background-color : #FCFCFC
+        &:hover
+          background-color #E5FCFD
+.ttv-table-big
+  tr
+    td
+      padding 4px 10px
+      max-width 180px
+      word-wrap break-word
+      img
+        width 50px
+        height 30px
+        margin-top -3px
+        margin-bottom -3px
+
+.ttv-model-table
+  tr
+    td
+      &:nth-child(odd)
+        text-align right
+      overflow hidden
+      word-wrap  break-word
+      &:nth-child(even)
+        max-width 300px
+
+
+
+/*-------------panel----------*/
+
+.ttv-col-xs12,.ttv-col-xs9,.ttv-col-xs8,.ttv-col-xs10,.ttv-col-xs6,.ttv-col-xs3,.ttv-col-xs2,.ttv-col-xs7,.ttv-col-xs4
+  position relative
+  padding 0 10px
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height 1px
+
+.ttv-col-xs12
+  width 100%
+.ttv-col-xs10
+  width 80%
+.ttv-col-xs9
+  width 75%
+.ttv-col-xs8
+  width 70%
+.ttv-col-xs7
+  width 60%
+.ttv-col-xs6
+  width 50%
+.ttv-col-xs4
+  width 40%
+.ttv-col-xs3
+  width 30%
+.ttv-col-xs25
+  width 25%
+.ttv-col-xs2
+  width 20%
+
+.ttv-panel
+  width 100%
+  margin-bottom: 20px;
+  /*background-color: #fff;*/
+  /*background-color #eee*/
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  min-height 20px
+.ttv-panel-primary
+  border-color primary_color
+  .ttv-panel-header
+    background-color primary_color
+
+.ttv-panel-header
+  /*min-height 40px*/
+  padding: 7px 15px
+  width 100%
+  color #fff
+  .ttv-header-search
+    margin-top -7px
+    padding-top 3px
+    margin-bottom -7px
+    input[type="text"]
+        margin-right 5px
+        border-radius 6px
+    .ttv-btn
+      margin 0
+    .ttv-select-form
+      margin-right 20px
+  .ttv-panel-option
+  .ttv-panel-title
+    margin-top: 0
+    margin-bottom: 0
+    font-size: 14px
+  &:after
+    content " "
+    display block
+    clear both
+.ttv-panel-body
+  padding 15px 10px
+
+/*--------- panel 结束 ------------*/
+
+
+.ttv-btn
+    margin 20px 4px
+    padding 5px 8px
+    background-color primary_color
+    min-width 40px
+    text-align center
+    color white
+    border-radius 4px
+    border 1px solid #285e8e
+    cursor pointer
+    font-weight 400
+    /*letter-spacing 1px*/
+    &:hover
+      background-color #3276b1
+.ttv-btn-success
+  background-color #12c712
+  border 1px solid #0e8e0d
+
+.ttv-btn-disabled
+  background-color #949393
+  border 1px solid #8C8C8C
+  &:hover
+    background-color #949393
+
+.ttv-form-cancel
+  background-color #fff
+  border 1px solid #ccc
+  color #000
+  &:hover
+    background-color #e6e6e6
+    border-color #adadad
+
+
+.ttv-select
+  height 22px
+  min-width 110px
+  border 1px solid #cccccc
+
+.ttv-select-form
+  min-width 180px
+  height 25px
+  border 1px solid #cccccc
+  margin-right 5px
+
+.ttv-prompt
+  min-height 35px
+  background-color #F9F9F9
+  border-radius 3px
+  margin 5px 0
+  padding 5px 20px
+  position relative
+  em
+    color #ff0000
+    padding 0 5px
+
+.ttv-prompt-head
+  margin-top 0px
+  line-height 35px
+  height 35px
+  padding 0 20px
+
+  .ttv-btn
+    margin 0
+    margin-left 10px
+  select,input,button
+    margin-left 10px
+  .ttv-form-control
+    width 60%
+  .ttv-select-form
+    width auto
+    min-width 80px
+
+
+.ttv-search-info
+  background-color #FFFFCB
+  margin-top -5px
+  margin-bottom 5px
+  color #40B817
+  _transition(.7s)
+  /*display none*/
+  opacity 0
+  height 0
+  position relative
+
+.ttv-search-info-show
+  /*display block*/
+  opacity 0.9
+  height 35px
+
+.ttv-search-btn
+  position absolute
+  right 30px
+  top 5px
+  min-width 50px
+  letter-spacing 3px
+.ttv-search-btn2
+  position absolute
+  right 100px
+  top 5px
+  letter-spacing 3px
+
+/*------------表单内容--------------*/
+.ttv-form-control
+  height 30px
+  border 1px solid #cccccc
+  background-color #fff
+  color #000000
+  border-radius 2px
+  padding 6px 12px
+  font-size 12px
+.ttv-form-control-big
+  width 350px !important
+.ttv-form-line
+  .ttv-form-group
+    display inline-block
+    margin-bottom 0
+    vertical-align middle
+  .ttv-form-control
+    display inline-block
+    vertical-align middle
+    width auto
+
+.ttv-form-group
+  margin-bottom 15px
+  label
+    margin-right 3px
+  input,select
+    margin-right 5px
+  .ttv-form-group-tips
+    color red
+    max-width 20px
+    overflow hidden
+  .ttv-form-label
+    min-width 70px
+  .ttv-checkbox-online ,.ttv-radio-online
+      margin-right 20px
+.ttv-form-submit
+  text-align right
+  .ttv-btn
+    margin 2px 10px
+    letter-spacing 2px
+    width 70px
+.ttv-form-msg
+  color #ff0000
+  margin 10px 20px 0 0
+
+
+
+
+
+
+
+
+
+
+
+//遮罩层
+.ttv-model-backdrop
+  height 100%
+  width 100%
+  position fixed
+  z-index -1
+  background-color: #fff
+  opacity 0
+  top 0
+  display block
+  _transition( .6s)
+  transition-timing-function : ease-out
+.ttv-in
+  display block
+  z-index 10000
+  background-color: #000
+  opacity 0.35
+
+
+/*---------------浮层-------------------*/
+/*.ttv-show-model*/
+  /*.ttv-model-box*/
+    /*top 0*/
+/*opacity 1*/
+/*.ttv-close-model*/
+  /*.ttv-model-box*/
+    /*top -2000px*/
+/*opacity 0.5*/
+.ttv-model-box
+  position fixed
+  margin auto
+  width 500px
+  height 350px
+  background #fff
+  top 0px
+  left 0
+  z-index 10001
+  right 0
+  bottom 0
+  /*opacity 0*/
+  /*padding 10px 25px*/
+  border 1px solid #ECECEC
+  border-radius 3px;
+  box-shadow: 1px 1px 1px #ccc;
+  _transition(top, 0.5s)
+  .ttv-model-table
+    tr
+      td:nth-child(odd)
+        text-align: left
+  .ttv-prompt-head
+    .ttv-form-control
+      width 25%
+  .ttv-box-header
+    /*text-align center*/
+    padding 0 20px 0 20px
+    line-height 45px
+    height 45px
+    border-bottom 1px solid #ECECEC
+    /*box-shadow: 1px 1px 1px;*/
+    background #FDFDFD
+    h3
+      float left
+      width 120px
+      font-weight bold
+    .ttv-box-close
+      float right
+      font-size 14px
+      color #ccc
+      _transition( 0.3s)
+      &:hover
+        color #000011
+  .ttv-box-body
+    padding 20px
+
+  .ttv-box-footer
+    position absolute
+    /*opacity 0*/
+    /*padding 10px 0*/
+    bottom 0
+    display block
+    height 45px
+    /*line-height 50px*/
+    border-top 1px solid #ECECEC
+    /*padding: 0 20px 0 20px;*/
+    width 100%
+    .ttv-box-tips
+      color #ED0A0A
+      margin-left 20px
+      float left
+      margin-top 11px
+    .ttv-box-btns
+      /*position absolute*/
+      float right
+      margin: 6px 10px 0 0
+      /*top 2px*/
+      .ttv-box-btn
+        min-width 60px
+        height 32px
+        line-height 32px;
+        border 1px solid #cccccc
+        border-radius 2px;
+        margin 0px 5px
+        padding 0 3px
+        font-size 14px
+        &:hover
+          background #eee
+      .ttv-btn-submit
+        background #337ab7
+        border 1px solid #2e6da4
+        color: #fff
+        &:hover
+          background #286090
+      .ttv-btn-cls
+        background #fff
+.ttv-model-bigbox
+  width 600px
+  height 520px
+  .ttv-box-body
+    height 420px
+    overflow scroll
+.ttv-model-sm
+  height 180px
+  width 300px
+  .ttv-box-header
+    height 35px
+    line-height 35px
+  .ttv-box-footer
+    height 40px
+    .ttv-box-btns
+      margin: 6px 10px 0 0
+      .ttv-box-btn
+        height 25px
+        line-height 25px
+        font-size 12px
+
+/*-----------浮层结束--------------------*/
+
+/*-----顶部提示层------*/
+.ttv-top-tips
+  position fixed
+  background-color #000
+  min-height 50px
+  width 300px
+  right 20px
+  text-align center
+  padding-top 15px
+  opacity 0
+  z-index 10010
+  /*display none*/
+  top -50px
+  font-size 14px
+  border  1px solid #ccc
+  box-shadow  1px 1px 1px #ccc
+  border-radius 5px
+  color #fff
+  font-weight 700
+  _transition(.3s)
+
+.tts-top-tips-show
+
+
+.ttv-top-tips-suc
+  background-color #51a351
+  display block
+  top 20px
+  opacity .9
+
+.ttv-top-tips-warning
+  background-color #f89406
+  display block
+  top 20px
+  opacity .9
+.ttv-top-tips-err
+  background-color #bd362f
+  display block
+  top 20px
+  opacity .9
+.ttv-top-tips-info
+  background-color #2f96b4
+  display block
+  top 20px
+  opacity .9
+
+.ttv-load-img
+  position absolute
+  top 5px
+  width 20px
+  height 20px
+  margin 2px 5px
+
+.ttv-divitem
+  position relative
+  .ttv-load-img
+    top 20px
+
+ .ttv-img-small{
+   width 30px
+   height 30px
+ }
+
+
+/*------------------- 分页 ----------------------*/
+.ttv-pager
+  margin-top 2px
+  &:after
+    content " "
+    display  block
+    height 0
+    clear both
+  .ttv-pagination
+    li
+      float left
+      a
+        border 1px solid #ccc
+        margin-left 5px
+        min-width 40px
+        padding-top 2px
+        display inline-block
+        border-radius 4px
+        /*margin-left -1px*/
+        line-height: 1.8
+        text-align center
+        color #337ab7
+        background-color #fff
+        &:hover
+          background-color #FCFCFC
+      /*&:first-child>a,&:first-child>span*/
+        /*margin-left: 0;*/
+        /*border-top-left-radius: 4px;*/
+        /*border-bottom-left-radius: 4px;*/
+
+     li.ttv-active
+       a
+         border 1px solid #337ab7
+         background-color #4B9ADF
+         color #FFFFFF
+         font-weight bold
+         &:hover
+           background-color #337ab7
+
+     li.ttv-disabled
+       a
+        color #777
+
+
+/*------------------- 分页结束 ----------------------*/

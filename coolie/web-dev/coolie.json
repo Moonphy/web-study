@@ -1,0 +1,34 @@
+{
+  "js": {
+    "main": [
+      "./static/js/app/**/*.js"
+    ],
+    "coolie-config.js": "./static/js/coolie-config.js",
+    "dest": "./static/js/",
+    "chunk": [
+      "./static/js/jquery.min.js"
+    ]
+  },
+  "css": {
+    "dest": "./static/css/",
+    "minify": {
+      "compatibility": "ie7"
+    }
+  },
+  "html": {
+    "src": [
+      "./views/**/*.html"
+    ],
+    "minify": true
+  },
+  "resource": {
+    "dest": "./static/img/",
+    "minify": true
+  },
+  "copy": [],
+  "dest": {
+    "dirname": "../web-pro/",
+    "host": "",
+    "versionLength": 6
+  }
+}

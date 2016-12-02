@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: gainsboro;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  box-sizing: border-box; }
+
+.main {
+  width: 40%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end; }
+  .main h1 {
+    width: 100%;
+    text-align: center; }
+
+[id^=main] div {
+  width: 150px;
+  height: 50px; }
+
+.container-flex {
+  display: flex;
+  flex-flow: row wrap; }
+
+#main2 {
+  flex-flow: row; }
+
+#main3 {
+  flex-flow: column;
+  align-content: center; }
+
+/*# sourceMappingURL=flexbox.css.map */

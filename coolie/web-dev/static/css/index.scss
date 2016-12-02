@@ -1,0 +1,24 @@
+body{
+  background-image: url("../img/case_details_body_bg1.jpg"),
+  url("../img/case_details_body_bg2.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0,center 298px;
+  background-size: 100%;
+}
+.step{
+  background-image: url("../img/icon/block_top_bg1.png"),url("../img/icon/block_top_bg2.png");
+  background-color: greenyellow;
+  background-position: 20px 20px,20px 100px;
+  background-repeat: no-repeat;
+}
+.row{
+  background-color: lightcoral;
+  color: #ffffff;
+  background-image: url("../img/icon/block_top_bg3.png");
+  background-position: 20px 10px;
+  background-repeat: no-repeat;
+}
+.img{
+  position: absolute;
+  left: 20%;
+}

@@ -1,0 +1,18 @@
+{
+    "views/index/index.html": {
+        "css": {
+            "static/css/190a88.css": [
+                "static/css/common.css",
+                "static/css/index.css"
+            ]
+        },
+        "js": {},
+        "main": "static/js/app/index/index.js",
+        "deps": [
+            "static/js/app/path1/1.js",
+            "static/js/app/path2/2.js",
+            "static/js/app/path3/3.js",
+            "static/js/jquery.min.js"
+        ]
+    }
+}

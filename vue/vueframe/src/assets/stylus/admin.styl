@@ -1,0 +1,72 @@
+/*----------- login --------------*/
+
+.form-signin
+  .alert
+    padding 0
+    border 0
+
+
+.ttv-nav
+  width: 100%;
+  padding-right: 20px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative
+  line-height 50px
+  color nav-color
+  top : 0
+  z-index: 1000;
+  background-color main-color
+  &:after
+    clear both
+  .ttv-logo
+    font-size 2.5rem
+    text-align center
+    width 180px
+    height 50px
+    /*line-height 60px*/
+    margin-left 40px
+    color nav-hover-color
+    position absolute
+  .ttv-nav-item
+    position absolute
+    left 250px
+    top 0
+    li
+      float left
+      a
+        position relative
+        display: block
+        height 50px
+        line-height 50px
+        width 90px
+        font-size 1.2rem
+        color nav-color
+        text-align center
+        _transition(background-color, 0.3s)
+        &:hover
+          color nav-hover-color
+          &:after
+            _navhover()
+      .ttv-active
+        color nav-hover-color
+        &:after
+          _navhover()
+
+
+/*----------------------- Botton ----------------------------*/
+.btn
+  display inline-block
+  padding 5px 10px
+  font-size 14px
+  text-align center
+  vertical-align center
+  border-radius 4px
+  letter-spacing 2px
+.btn-default
+  background main-color
+  color #fff
+
+input[type="text"]
+  border 1px solid grey
+
