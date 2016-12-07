@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li.pass{
+            color: green;
+        }
+        li.fail{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<ul id="results"></ul>
+
+<!--<script>
+    // 断言
+    function assert(value, desc){
+        var li = document.createElement('li');
+        li.className = value ? "pass" : "fail";
+        li.appendChild(document.createTextNode(desc));
+        document.getElementById('results').appendChild(li);
+    }
+    window.onload = function () {
+        assert(true, "the test suite is running")
+        assert(false, "失败")
+    }
+</script>-->
+<!--<script>
+    // 测试组
+    (function () {
+        var results;
+        this.assert = function assert(value, desc) {
+            var li = document.createElement('li');
+            li.className = value ? "pass" : "fail";
+            li.appendChild(document.createTextNode(desc));
+            results.appendChild(li);
+            if(!value){
+                li.parentNode.parentNode.className = "fail";
+            }
+            return li;
+        };
+        this.test = function test(name, fn) {
+            results = document.getElementById("results");
+            console.log(results);
+            results = assert(true, name).appendChild(document.createElement("ul"));
+            console.log(results);
+            fn();
+        }
+    })();
+    window.onload = function () {
+        test("一个测试", function () {
+            assert(true, "first assertion completed");
+            assert(true, "second assertion completed");
+            assert(true, "third assertion completed");
+        });
+        test("另一个测试", function () {
+            assert(true, "first assertion completed");
+            assert(false, "second assertion completed");
+            assert(true, "third assertion completed");
+        });
+        test("第三个测试", function () {
+            assert(null, "fail");
+            assert(5, "pass");
+        });
+
+    }
+</script>-->
+<script>
+    // 异步测试套件
+    (function () {
+        var queue = [], paused = false, results;
+        this.test = function (name, fn) {
+            queue.push(function () {
+                results = document.getElementById("results");
+                results = assert(true, name).appendChild(document.createElement("ul"));
+                fn();
+            })
+            
+        };
+        this.pause = function () {
+            paused = true;
+            console.log(paused)
+        };
+        this.resume = function () {
+            paused = false;
+            setTimeout(runTest, 1)
+        };
+        function runTest(){
+            if(!paused && queue.length){
+                queue.shift()();
+                if(!paused){
+                    resume()
+                }
+            }
+        }
+        this.assert = function (value, desc) {
+            var li = document.createElement("li");
+            li.className = value ? "pass" : "fail";
+            li.appendChild(document.createTextNode(desc));
+            var results = document.getElementById('results');
+            results.appendChild(li);
+            if(!value){
+                li.parentNode.parentNode.className = "fail";
+            }
+            return li;
+        }
+    })();
+    window.onload = function () {
+        test("async test #1", function () {
+            pause();
+            setTimeout(function () {
+                assert(true, "first test completed");
+                resume()
+            }, 1000)
+        });
+        test("async test #2", function () {
+            pause();
+            setTimeout(function () {
+                assert(true, "second test completed");
+                resume()
+            }, 1000)
+        });
+    }
+</script>
+<script>
+    // 第一种
+    function isNimble(){
+        return true;
+    }
+    assert(typeof window.isNimble === "function", "isNimble() defined");
+    assert(isNimble.name === "isNimble", "isNimble() has a name");
+
+    // 第二种
+    var canFly = function () {
+        return true;
+    };
+    assert(typeof window.canFly === "function", "canFly() defined");
+    assert(canFly.name === "", "canFly() has no name");
+    console.log(canFly.name);
+
+    // 第三种
+    window.isDeadly = function () {
+        return true;
+    };
+    assert(typeof window.isDeadly === "function", "isDeadly() defined");
+    console.log(window.isDeadly.name);
+</script>
+</body>
+</html>
