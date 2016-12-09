@@ -10,8 +10,14 @@ require.config({
 
 require(['jquery', 'window'], function ($, w) {
     $('#a').click(function () {
-        new w.Window().alert("welcome", function () {
-            $('body').css('background','#ff6666')
+        new w.Window().alert({
+            content: "welcome",
+            handler: function () {
+                $('body').css('background','#ff6666')
+            },
+            width: 200,
+            height: 150,
+            y: 30
         })
     })
 });
