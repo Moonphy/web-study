@@ -1,8 +1,8 @@
 /**
  * Created by Administrator on 2016-12-9.
  */
-// underscore ÇÃÔ´Âë
-// µÚÒ»´ÎÊ±¼ä£º2016-12-9
+// underscore æºç 
+// 2016-12-10
 (function () {
 
     var root = this;
@@ -21,7 +21,7 @@
         nativeBind        = FuncProto.bind,
         nativeCreate      = Object.create;
 
-    // Ô­ĞÍÉèÖÃµÄ¿ÉÖØÓÃ¹¹Ôìº¯Êı¡£
+    // Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ÃµÄ¿ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½ìº¯ï¿½ï¿½ï¿½ï¿½
     var Ctor = function () {};
 
     // Create a safe reference to the Underscore object for use below.
@@ -44,7 +44,7 @@
     // Current version.
     _.VERSION = '1.7.0';
 
-    // ÄÚ²¿º¯Êı£¬·µ»ØÒ»¸öÓĞĞ§µÄ£¨µ±Ç°ÒıÇæ£©°æ±¾µÄ´«µİÔÚ»Øµ÷ÖĞ£¬±»·´¸´Ó¦ÓÃÔÚÆäËûÏÂ»®Ïß¹¦ÄÜ
+    // ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ğ§ï¿½Ä£ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½æ£©ï¿½æ±¾ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ú»Øµï¿½ï¿½Ğ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â»ï¿½ï¿½ß¹ï¿½ï¿½ï¿½
     var optimizeCb = function (func, context, argCount) {
         if (context === void 0) return func;
         switch (argCount == null ? 3 : argCount){
@@ -83,7 +83,7 @@
         return type === 'function' || type === 'object' && !!obj;
     };
 
-    // ÓÃÓÚ¼ì²éÒ»¸ö¶ÔÏóÊÇ·ñÓĞÒ»×é¸ø¶¨µÄ¡°¼ü£ºÖµ¡±¶Ô¡£
+    // ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ô¡ï¿½
     _.matches = function (attrs) {
         var pairs = _.pairs(attrs), length = pairs.length;
         return function (obj) {
@@ -97,7 +97,7 @@
         }
     };
 
-    // ½«Ò»¸ö¶ÔÏó×ª»»³ÉÒ»¸öÁĞ±íÖĞµÄ[¼ü£¬Öµ]¶Ô
+    // ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ğ±ï¿½ï¿½Ğµï¿½[ï¿½ï¿½ï¿½ï¿½Öµ]ï¿½ï¿½
     _.pairs = function (obj) {
         var keys = _.keys(obj);
         var length = keys.length;
@@ -108,7 +108,7 @@
         return pairs;
     };
 
-    // key ÔÚ IE < 9 ÖĞ 'for key in ...' ²»»áµü´ú
+    // key ï¿½ï¿½ IE < 9 ï¿½ï¿½ 'for key in ...' ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     var hasEnumBug = !{toString: null}.propertyIsEnumerable('toString');
     var nonEnumerableProps = ['constructor', 'valueOf', 'isPrototypeOf', 'toString', 'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
 
