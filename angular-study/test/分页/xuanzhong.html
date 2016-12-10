@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>get value:<input type="text" name="inputname" id="inputname"/>
+    <div id="getvalue" style="display:none;">
+        <div id="tl"></div><div id="tr"></div>
+        <table style="border:1px solid #ccc ;width:500px;text-align:left;">
+            <thead>
+            <tr>
+                <th>number</th>
+                <th>last name</th>
+                <th>first name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2</td>
+                <td>xing</td>
+                <td>ge</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>xingad</td>
+                <td>gead</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>xingxing</td>
+                <td>ge</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>number</td>
+                <td>last name</td>
+                <td>first name</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#inputname").click(function(){
+            //alert('focus');
+            $("#getvalue").css("display",'block')//显示表格
+                    .addClass('hover')
+                    .find('table tr').dblclick(function(){//双击表格tr
+                        var text=$(this).find("td:eq(0)").text();//获取表格td的第一个的文本值
+                        //alert($text);
+                        $("#getvalue").css('display','none');//隐藏表格
+                        $("#inputname").val(text);//赋值Input
+                    });
+        });
+    })
+</script>
+</body>
+</html>

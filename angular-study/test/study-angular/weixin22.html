@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="weixin" ng-controller="WeixinController">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/weixin.css">
+    <title>{{vm.title}}</title>
+</head>
+<body >
+<div id="main">
+    <h2>{{vm.title}}
+
+    </h2>
+
+    <div class="source"><span>2014-10-16</span><a href="http://www.moihu.com/product.html">美乎推荐</a></div>
+    <ul id="page-content">
+        <li ng-class="item.class" ng-repeat="item in vm.contents" ng-dblclick="item.editable=true;" ng-click="setTarget($index)"
+                        ng-mouseenter="item.showTools=true" ng-mouseleave="item.showTools=false">
+            <img ng-if="item.type=='img'" ng-src="{{item.url}}"/><a name="name{{item.imgId}}"/>
+            <span ng-if="item.type=='text'" >{{item.content}}
+                <textarea ng-show="item.editable" class="editor"  ng-blur="item.editable=false" ng-model="item.content"></textarea>
+            </span>
+            <div class='tools' ng-show="item.showTools && !item.editable">
+                <div class='move-up' ng-click="moveUp($index)" ng-hide="targetIndex==$index"></div>
+                <div class='delete' ng-click="delete($index)"></div>
+                <div class='move-down' ng-click="moveDown($index)" ng-hide="targetIndex==$index"></div>
+            </div>
+        </li>
+    </ul>
+    <div class="qr_code_pc_outer">
+        <div class="qr_code_pc_inner">
+            <div class="qrcode">
+                <div class="image"><img src="images/weixin/qrcode.bmp"></div>
+                <p>微信扫一扫<br>获得更多内容</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="operation">
+    <div id="btn-return">返回后台</div>
+    <div id="btn-preview">预览效果</div>
+    <div id="btn-save">保存文档</div>
+    <div id="btn-add" ng-click="add()" >增加段落</div>
+    <div id="btn-clear" ng-click="clear()">清除所有</div>
+    <div id="btn-first-letter" ng-click="fb()" ng-show="targetIndex>=0">首字大写</div>
+    <div id="btn-align-center" ng-click="tc()" ng-show="targetIndex>=0">段落居中</div>
+    <div id="btn-first-indent" ng-click="ti()" ng-show="targetIndex>=0">首行缩进</div>
+</div>
+<div id="edit-panel">
+    <ul>
+        <li ng-class="image.class" ng-repeat="image in vm.images" ng-mouseenter="item.showTools=true" ng-mouseleave="item.showTools=false">
+            <a href="#name{{image.id}}"><img ng-src="{{image.url}}"></a>
+            <div class="number">{{$index+1}}</div>
+            <div class='tools' ng-show="item.showTools && image.class=='move'">
+                <div class='move-up' ng-click="insertUp($index)"></div>
+                <div class='move-down' ng-click="insertDown($index)"></div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/weixin2.js"></script>
+</body>
+</html>

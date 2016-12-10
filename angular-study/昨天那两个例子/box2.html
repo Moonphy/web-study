@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="StyleController">
+    <div ng-style="{'background-color':'red','width':style.width + 'px','height':style.height + 'px'}" ng-click="add()">
+
+    </div>
+    <p>
+        Width:<input ng-model="style.width"  >
+    </p>
+    <p>
+        Height:<input ng-model="style.height">
+    </p>
+    <script type="application/javascript" src="js/angular.min.js"></script>
+    <script type="application/javascript">
+        function StyleController($scope){
+            $scope.style={width:100,height:100};
+            $scope.add = function(){
+                $scope.style.width+=10;
+                $scope.style.height+=10;
+            }
+        }
+
+    </script>
+</body>
+</html>

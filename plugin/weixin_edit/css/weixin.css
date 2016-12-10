@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  background-color: #e7e8eb;
+  font-family: '微软雅黑';
+  padding: 0;
+}
+#main {
+  background-color: #ffffff;
+  padding: 15px 10px;
+  margin: 0 auto;
+  color: #333333;
+}
+#main h2 {
+  position: relative;
+  font-size: 1.25em;
+  line-height: 24px;
+  border-bottom: 1px solid #e7e7eb;
+  margin: 0px 0px 5px;
+  padding-bottom: 10px;
+}
+#main h2 input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 688px;
+  height: 20px;
+  line-height: 20px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #cecece;
+  box-shadow: 0 0 3px 3px #ededed;
+}
+#main .source {
+  font-size: 0.75em;
+  line-height: 1.6em;
+}
+#main .source a {
+  margin-left: 1em;
+  text-decoration: none;
+}
+#main .qr_code_pc_outer {
+  display: none;
+}
+#page-content p {
+  position: relative;
+  text-align: left;
+  line-height: 1.7em;
+  color: #595959;
+}
+#page-content p.fb:first-letter {
+  font-size: 2em;
+}
+#page-content p.tc {
+  text-align: center;
+}
+#page-content p.ti {
+  text-indent: 2em;
+}
+#page-content p:hover {
+  background-color: #f1f1f1;
+}
+#page-content p.target {
+  border: 1px dashed #000000;
+}
+#page-content p .tools {
+  position: absolute;
+  top: -24px;
+  right: 0;
+  height: 72px;
+  width: 24px;
+}
+#page-content p .tools div {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#page-content p .tools div:hover {
+  background-color: blueviolet;
+}
+#page-content p .delete {
+  background: url("../images/weixin/delete.png") center center no-repeat;
+}
+#page-content p .move-up {
+  background: url("../images/weixin/move_up.png") center center no-repeat;
+}
+#page-content p .move-down {
+  background: url("../images/weixin/move_down.png") center center no-repeat;
+}
+#page-content p .editor {
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 678px;
+  padding: 10px;
+  border: 1px solid #cecece;
+  box-shadow: 0 0 3px 3px #ededed;
+}
+#page-content p.img {
+  text-align: center;
+}
+#page-content img {
+  box-sizing: border-box !important;
+  height: auto !important;
+  visibility: visible !important;
+  max-width: 100% !important;
+}
+@media screen and (min-width: 1023px) {
+  #main {
+    width: 698px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    border-color: #d9dadc;
+  }
+  .qr_code_pc_outer {
+    display: block !important;
+    position: fixed;
+    right: 0;
+    top: 20px;
+    left: 0;
+  }
+  .qr_code_pc_outer .qr_code_pc_inner {
+    width: 740px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .qr_code_pc_outer .qr_code_pc_inner .qrcode {
+    position: absolute;
+    width: 102px;
+    height: 149px;
+    padding: 16px;
+    border: 1px solid #d9dadc;
+    background-color: #ffffff;
+    right: -145px;
+    top: 0px;
+  }
+  .qr_code_pc_outer .qr_code_pc_inner .qrcode .image {
+    width: 102px;
+  }
+  .qr_code_pc_outer .qr_code_pc_inner .qrcode .image img {
+    width: 102px;
+    height: 102px;
+  }
+  .qr_code_pc_outer .qr_code_pc_inner .qrcode p {
+    margin: 0;
+    text-indent: 0;
+    color: #717375;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #edit-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 240px;
+    overflow-y: scroll;
+  }
+  #edit-panel ul {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  #edit-panel ul li {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+  }
+  #edit-panel ul li:hover {
+    background-color: #f1f1f1;
+  }
+  #edit-panel ul li.move {
+    cursor: move;
+  }
+  #edit-panel ul li.move a {
+    cursor: move;
+  }
+  #edit-panel ul li img {
+    width: 200px;
+    height: auto;
+  }
+  #edit-panel ul li .number {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  #edit-panel ul li .tools {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    height: 48px;
+    width: 24px;
+  }
+  #edit-panel ul li .tools div {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  #edit-panel ul li .tools div:hover {
+    background-color: blueviolet;
+  }
+  #edit-panel ul li .move-up {
+    background: url("../images/weixin/move_up.png") center center no-repeat;
+  }
+  #edit-panel ul li .move-down {
+    background: url("../images/weixin/move_down.png") center center no-repeat;
+  }
+  #operation {
+    height: 80px;
+    width: 120px;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    z-index: 10;
+  }
+  #operation div {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #48b6f7;
+    color: #ffffff;
+    font-size: 16px;
+    width: 90px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  #operation div:hover {
+    background-color: lightblue;
+  }
+}

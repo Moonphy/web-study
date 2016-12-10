@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div> p{
+            width: 800px;
+            height: 20px;
+        }
+        .tc{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="weixinEditCtrl">
+        <p ng-model="text">迪拜是世界奇异建筑最多的地方</p>
+        <button ng-click="add()">段落居中</button>
+        <button ng-click="firstWord()">首字变大</button>
+
+    </div>
+
+    <script src="js/angular.min.js"></script>
+    <script type="application/javascript">
+        function textCtrl($scope){
+            $scope.add = function(){
+                $scope.text = function(){
+                    $scope.align = "center";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

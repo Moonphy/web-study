@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app  ng-controller="WeixinController">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/weixin.css">
+    <title>{{vm.title}}</title>
+</head>
+<body>
+<div id="main">
+    <h2>{{vm.title}}</h2>
+    <div class="source"><span>2014-10-16</span><a href="http://www.moihu.com/product.html">美乎推荐</a></div>
+    <div id="page-content">
+        <p ng-class="item.class" ng-repeat="item in vm.contents" >
+            <span ng-if="item.type='text'">{{item.content}}</span>
+            <img ng-if="item.type='img'" ng-src="{{item.url}}">
+        </p>
+    </div>
+    <div class="qr_code_pc_outer">
+        <div class="qr_code_pc_inner">
+            <div class="qrcode">
+                <div class="image"><img src="images/weixin/qrcode.bmp"></div>
+                <p>微信扫一扫<br>获得更多内容</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="operation">
+    <div id="btn-return">返回后台</div>
+    <div id="btn-preview">预览效果</div>
+    <div id="btn-save">保存文档</div>
+    <div id="btn-add" ng-click="add()">增加段落</div>
+    <div id="btn-clear" ng-click="clear()">清除所有</div>
+    <div id="btn-first-letter" ng-click="addClassFb()">首字大写</div>
+    <div id="btn-align-center" ng-click="addClassTc()">段落居中</div>
+    <div id="btn-first-indent" ng-click="addClassTi()">首行缩进</div>
+</div>
+<div id="edit-panel">
+    <ul>
+        <li ng-class="item.class" ng-repeat="item in vm.images" ng-mouseenter="item.showTools=true" ng-mouseleave="item.showTools=false">
+            <a href="#name{{item.id}}"><img ng-src="{{item.url}}"></a>
+            <div class="number">{{$index+1}}</div>
+            <div class='tools' ng-show="item.showTools && item.class">
+                <div class='move-up' ng-click="insertUp(item)"></div>
+                <div class='move-down'></div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/wexin_test.js"></script>
+</body>
+</html>

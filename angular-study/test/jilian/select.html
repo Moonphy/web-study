@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="testselect">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="container" ng-controller="sc">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" ng-model="vm.country" ng-options="country.label for country in vm.countries">
+                <option value="">-- 请选择国家 --</option>
+            </select>
+        </div>
+        <div class="col-md-4" ng-if="vm.country.provinces">
+            <select class="form-control" ng-model="vm.province"
+                    ng-options="province.label for province in vm.country.provinces">
+                <option value="">-- 请选择省份/州 --</option>
+            </select>
+        </div>
+        <div class="col-md-4" ng-if="vm.province.cities">
+            <select class="form-control" ng-model="vm.city" ng-options="city.label for city in vm.province.cities">
+                <option value="">-- 请选择城市/县区 --</option>
+            </select>
+        </div>
+    </div>
+    <div>您选择的是：{{vm.country.label}} - {{vm.province.label}} - {{vm.city.label}}</div>
+    <div class="alert alert-info">
+        这里使用ng-if指令来达到下一级有数据才显示下一级的效果
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" ng-model="vm.t" ng-options="c.p group by c.c for c in vm.cs">
+                <option value="">-- 请选择省份/州 --</option>
+            </select>
+        </div>
+        <div class="col-md-4" ng-if="vm.t.p">
+            <select class="form-control" ng-model="vm.c" ng-options="city for city in vm.t.citys">
+                <option value="">-- 请选择城市/县区 --</option>
+            </select>
+        </div>
+
+    </div>
+    <div>您选择的是：{{vm.t.c}} - {{vm.t.p}} - {{vm.c}} </div>
+
+</div>
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/select.js"></script>
+
+
+</body>
+</html>

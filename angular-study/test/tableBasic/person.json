@@ -1,0 +1,27 @@
+[
+    {
+        "label": "ID",
+        "name": "id",
+        "type": "string"
+    },
+    {
+        "label": "姓名",
+        "name": "name",
+        "type": "string"
+    },
+    {
+        "label": "粉丝数",
+        "name": "followers",
+        "type": "number"
+    },
+    {
+        "label": "收入",
+        "name": "income",
+        "type": "currency"
+    },
+    {
+        "label": "",
+        "name": "actions",
+        "sortable": "false"
+    }
+]

@@ -1,0 +1,6 @@
+1、cd到根目录，运行meteor
+
+2、部署在meteor，运行meteor deploy moonphy.meteor.com
+
+3、meteor up初始化 npm install -g mup
+   新建meteor-deploy，去到目录，运行mup init
