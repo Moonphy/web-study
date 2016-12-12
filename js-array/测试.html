@@ -106,7 +106,7 @@
                 li.parentNode.parentNode.className = "fail";
             }
             return li;
-        }
+        };
     })();
     window.onload = function () {
         test("async test #1", function () {
@@ -147,6 +147,39 @@
     };
     assert(typeof window.isDeadly === "function", "isDeadly() defined");
     console.log(window.isDeadly.name);
+</script>
+<script>
+    function creep(){
+        return this;
+    }
+    assert(false, "=============== 我是分割线 ================");
+    assert(creep() === window, "creeping in the window");
+    var sneak = creep;
+    assert(sneak() === window,"sneak in the window");
+    console.log(sneak());
+    var ninja1 = {
+        skulk: creep
+    };
+    assert(ninja1.skulk() === window, "the 1st ninja is skulking");
+    console.log(ninja1.skulk());
+    var ninja2 = {
+        skulk: creep
+    };
+    assert(ninja2.skulk() === ninja2, "the 2nd ninja is skulking");
+</script>
+<script>
+    // 代码3.4
+    function Ninja(){
+        this.skulk = function () {
+            return this;
+        }
+    }
+    var ninja1 = new Ninja();
+    var ninja2 = new Ninja();
+    assert(ninja1.skulk() === ninja1, 'ninja1');
+    assert(ninja2.skulk() === ninja2, 'ninja2');
+    //console.log(ninja1.skulk()=== ninja1);
+    //console.log(ninja2.skulk());
 </script>
 </body>
 </html>
