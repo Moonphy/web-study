@@ -1,1 +1,0 @@
-BTR.require(["../common"],function(e){BTR.require.config({baseUrl:"../../js/lib"}),BTR.require(["app/test/index"])});

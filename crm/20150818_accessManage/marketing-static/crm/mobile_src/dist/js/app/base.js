@@ -1,1 +1,0 @@
-BTR.define(["require","./base"],function(e){return e("./base")});
