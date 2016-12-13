@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>4.2递归</title>
+    <style>
+        li.pass{
+            color: green;
+        }
+        li.fail{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<ul id="results"></ul>
+<script>
+    // 断言
+    function assert(value, desc){
+        var li = document.createElement('li');
+        li.className = value ? "pass" : "fail";
+        li.appendChild(document.createTextNode(desc));
+        document.getElementById('results').appendChild(li);
+    }
+
+
+    /*function chirp(n){
+        return n > 1 ? chirp(n - 1) + "-chirp" : "chirp";
+    }*/
+    /*function chirp(n){
+        if(n > 1){
+            return chirp(n -1) + "-chirp"
+        } else {
+            return "chirp"
+        }
+    }*/
+    //assert(chirp(3) == "chirp-chirp-chirp", "comes naturally");
+    //console.log(chirp(4))
+</script>
+<!--<script>
+    var ninja = {
+        chirp: function (n) {
+            return n > 1 ? this.chirp(n - 1) + "-chirp" : "chirp";
+        }
+    };
+    assert(ninja.chirp(2) == "chirp-chirp", "hehe");
+
+    var samurai = {
+        chirp: ninja.chirp
+    };
+    ninja = {};
+    try {
+        assert(samurai.chirp(3) == "chirp-chirp-chirp", "对的")
+    }catch(e){
+        assert(false, "false")
+    }
+    console.log(samurai.chirp(3))
+</script>-->
+<script>
+    var ninja = {
+        chirp: function signal(n){
+            return n > 1 ? signal(n - 1) + "-chirp" : "chirp";
+        }
+    };
+    assert(ninja.chirp(2) == "chirp-chirp", "hehe");
+
+    var samurai = {
+        chirp: ninja.chirp
+    };
+    ninja = {};
+    assert(samurai.chirp(2) == "chirp-chirp", "hehe");
+</script>
+<script>
+    // 内联函数
+    var ninja = function myNinja() {
+        assert(ninja == myNinja, "true")
+    };
+    ninja();
+    assert(typeof myNinja == "undefined", "true")
+</script>
+</body>
+</html>
