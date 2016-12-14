@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+<script>
+    var outerValue = 'ninja';
+    var later;
+
+    function outerFunction(){
+        var innerValue = 'samurai';
+
+        function innerFunction(){
+            console.log("I can see outerValue");
+            console.log("I can see innerValue");
+        }
+        later = innerFunction;
+    }
+    outerFunction();
+    //later();
+</script>
+<script>
+    function Ninja (){
+        var feints = 0;
+        this.getFeints = function () {
+            return feints;
+        };
+        this.feint = function () {
+            feints++;
+        };
+    }
+    var ninja = new Ninja();
+    ninja.feint();
+    console.log(ninja.feints);
+    console.log(ninja.getFeints());
+    ninja.feint();
+    ninja.feint();
+    console.log(ninja.getFeints());
+</script>
+</body>
+</html>

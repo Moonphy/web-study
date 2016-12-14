@@ -56,7 +56,7 @@
     }
     console.log(samurai.chirp(3))
 </script>-->
-<script>
+<!--<script>
     var ninja = {
         chirp: function signal(n){
             return n > 1 ? signal(n - 1) + "-chirp" : "chirp";
@@ -69,14 +69,67 @@
     };
     ninja = {};
     assert(samurai.chirp(2) == "chirp-chirp", "hehe");
-</script>
-<script>
+</script>-->
+<!--<script>
     // 内联函数
     var ninja = function myNinja() {
         assert(ninja == myNinja, "true")
     };
     ninja();
     assert(typeof myNinja == "undefined", "true")
+</script>-->
+<!--<script>
+    // 函数存储
+    var store = {
+        nextId: 1,
+        cache: {},
+        add: function (fn) {
+            if (!fn.id){
+                fn.id = store.nextId++;
+                return !!(store.cache[fn.id] = fn);
+            }
+        }
+    };
+    function ninja(){}
+    console.log(store.add(ninja));
+    assert(store.add(ninja), "function was safely added");
+    assert(store.add(ninja), "but it was only added once");
+    console.log(store.add(ninja));
+
+    // 自记忆函数——记忆之前算出的结果
+    // 计算素数
+    function isPrime(value){
+        if(!isPrime.answers) isPrime.answers = {};
+        if(isPrime.answers[value] != null){
+            return isPrime.answers[value];
+        }
+        var prime = value != 1;
+        for (var i = 2; i < value; i++){
+            if(value % i == 0){
+                prime = false;
+                break;
+            }
+        }
+        return isPrime.answers[value] = prime;
+    }
+    console.log(isPrime(5));
+    console.log(isPrime(5));
+    console.log(isPrime(599999999999999999999999999999999999999999999999999999999999999));
+    console.log(isPrime(599999999999999999999999999999999999999999999999999999999999999));
+
+</script>-->
+<script>
+    function merge(root){
+        for(var i = 1; i < arguments.length; i++){
+            for (var key in arguments[i]){
+                root[key] = arguments[i][key];
+            }
+        }
+        return root;
+    }
+    var merged = merge({name: "batou"},{city: "niihama"});
+    console.log(merged.name);
+    console.log(merged.city);
 </script>
 </body>
 </html>
