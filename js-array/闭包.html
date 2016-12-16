@@ -5,6 +5,8 @@
     <title>闭包</title>
 </head>
 <body>
+<div id="testSubject"></div>
+<button id="testButton">Go!</button>
 <script>
     var outerValue = 'ninja';
     var later;
@@ -38,6 +40,22 @@
     ninja.feint();
     ninja.feint();
     console.log(ninja.getFeints());
+</script>
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script>
+$('#testButton').click(function () {
+    var elem$ = $('#testSubject');
+
+    elem$.html('loading...');
+debugger;
+    $.ajax({
+        url: 'test.html',
+        success: function (html) {
+            console.log('可以看到elem$');
+            elem$.html(html);
+        }
+    });
+})
 </script>
 </body>
 </html>
