@@ -7,7 +7,7 @@
 <body>
 <div>你好吗，我是test.html</div>
 <div id="log"></div>
-
+<button id="btn-1">点我啊！！</button>
 <script>
     'use strict';
     var promiseCount = 0;
@@ -33,6 +33,14 @@
         log.insertAdjacentHTML('beforeend', thisPromiseCount + ') 建立了Promise(同步代码结束)<br/><br/>');
     }
     testPromise();
+</script>
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="test.js"></script>
+<script>
+    hello = new Hello();
+    $('#btn-1').click(function () {
+        hello.con()
+    })
 </script>
 </body>
 </html>
