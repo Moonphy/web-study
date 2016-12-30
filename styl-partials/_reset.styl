@@ -1,0 +1,59 @@
+// reset
+// ==============================================
+
+html{
+  //font-family: sans-serif /* 1 */;
+  -ms-text-size-adjust: 100% /* 2 */;
+  -webkit-text-size-adjust: 100% /* 2 */;
+  font-size 62.5%
+}
+
+body{
+  width: 100%;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -ms-overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input,button, textarea, p, blockquote, th, td, hr{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: inherit;
+  font-weight: 500;
+  //line-height: 1.1;
+  color: inherit;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+  color: #666;
+}
+input[type="button"], input[type="submit"], input[type="reset"] {
+  -webkit-appearance: none;
+}
+textarea {  -webkit-appearance: none;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary{
+  display: block;
+}
+audio, canvas, progress, video{
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]){
+  display: none;
+  height: 0;
+}
+[hidden], template{display: none;}
+svg:not(:root){overflow: hidden;}
+ul li{list-style: none}
+a{
+  background: transparent;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.clearfix
+  *zoom:1;
+.clearfix:before {display:table;content:"";}
+.clearfix:after {display:table;content:"";clear:both;}

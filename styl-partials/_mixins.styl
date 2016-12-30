@@ -1,0 +1,148 @@
+// 混入声明
+// ==================================================
+
+// 圆角
+// ------------------------------
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+
+// 聚焦
+// ------------------------------
+tab-focus()
+  // 默认
+  outline thin dotted #333
+  // Webkit
+  outline 5px auto -webkit-focus-ring-color
+  outline-offset -2px
+
+
+// 过长文字显示省略号
+// @param 容器宽度
+// ------------------------------
+text-overflow(width = 100%)
+  width width
+  overflow hidden
+  word-wrap normal
+  white-space nowrap
+  text-overflow ellipsis
+
+// 隐藏文字
+// ------------------------------
+hide-text()
+  overflow hidden
+  white-space normal
+  text-indent -9999px
+
+// 文字两端对齐
+// ------------------------------
+text-justify()
+  text-align:justify;
+  text-justify:inter-ideograph;
+
+// 最小高度
+// ------------------------------
+min-height(height)
+  min-height height
+  height auto !important
+  height height
+
+// 设置字体大小
+rem(size)
+  font-size unit(size * 10, 'px')
+  font-size unit(size, 'rem')
+
+// 分隔线
+// ------------------------------
+split(position = bottom)
+  if position is bottom or position is top
+    img = "split_h"
+    bg-repeat = repeat-x
+  else
+    img = "split_v"
+    bg-repeat = repeat-y
+  background url("../img/" + img + ".png") bg-repeat position
+
+
+
+// 小三角
+caret(color = #000, size = 10px, direction = down)
+  @extend $caret-core
+  border-width size
+
+  if direction is up
+    border-style dashed dashed solid
+    border-color transparent transparent color
+  else if direction is right
+    border-style dashed dashed dashed solid
+    border-color transparent transparent transparent color
+  else if direction is down
+    border-style solid dashed dashed
+    border-color color transparent transparent
+  else if direction is left
+    border-style dashed solid dashed dashed
+    border-color transparent color transparent transparent
+  else if direction is up-left
+    border-style solid dashed dashed solid
+    border-color color transparent transparent color
+  else if direction is up-right
+    border-style solid solid dashed dashed
+    border-color color color transparent transparent
+  else if direction is down-left
+    border-style dashed dashed solid solid
+    border-color transparent transparent color color
+  else
+    border-style dashed solid solid dashed
+    border-color transparent color color transparent
+
+// 浮层
+// ------------------------------
+
+// 基本
+modal(width = modal-width, height = modal-height)
+  absolute left top
+  width unit(width, px)
+  min-height unit(height, px)
+  background-color #FFF
+  border 1px solid #AAA
+  z-index z-index-modal
+
+// 固定定位到坐标(x, y)
+pin(x = 0, y = 0)
+  fixed left unit(x, px) top unit(y, px)
+  if support-for-ie
+    _top unquote("expression(documentElement.scrollTop + " + y + ")")
+
+// 居中
+center-modal(width = modal-width, height = modal-height)
+  fixed left 50% top 50%
+  margin unit(- height / 2, px) 0 0 unit(- width / 2, px)
+  if support-for-ie
+    _position absolute
+    _top unquote("expression(documentElement.scrollTop + documentElement.clientHeight/2)")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
